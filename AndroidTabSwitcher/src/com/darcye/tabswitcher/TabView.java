@@ -18,8 +18,10 @@ import android.widget.RadioButton;
 
 /**
  * 
+ * <p>Tab with drawable and text elements, you can use both or one of them. Also , there has simple tip for the Tap , you can decide the Style all by your self..
+ *  <p> hope you like it :-)
  * @author Darcy
- *
+ * @site www.darcye.com
  */
 public class TabView  extends RadioButton{
 
