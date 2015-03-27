@@ -7,7 +7,7 @@
     <!-- Default setting of TabView -->
     <dimen name="tab_lable_text_size">10dp</dimen>
     <dimen name="tab_tip_red_dot_radius">4dp</dimen>
-    <dimen name="tab_tip_text_red_dot_radius">4dp</dimen>
+    <dimen name="tab_tip_text_red_dot_radius">8dp</dimen>
     <dimen name="tab_drawable_width">24dp</dimen>
     <dimen name="tab_drawable_height">24dp</dimen>
     

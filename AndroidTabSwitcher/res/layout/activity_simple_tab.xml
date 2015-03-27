@@ -1,9 +1,8 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res/com.darcye"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.darcye.tabswitcher.SimpleTabActivity" >
+    android:background="@color/white" >
 
     <android.support.v4.view.ViewPager
         android:id="@+id/view_pager"

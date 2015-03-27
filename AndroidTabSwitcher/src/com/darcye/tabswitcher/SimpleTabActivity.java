@@ -2,13 +2,11 @@ package com.darcye.tabswitcher;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v4.view.ViewPager.OnPageChangeListener;
-import android.support.v7.app.ActionBarActivity;
 import android.util.Log;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.RadioGroup.OnCheckedChangeListener;
@@ -16,7 +14,7 @@ import android.widget.RadioGroup.OnCheckedChangeListener;
 import com.darcye.R;
 
 
-public class SimpleTabActivity extends ActionBarActivity {
+public class SimpleTabActivity extends FragmentActivity {
 
 	private final static String TAG = "SimpleTabActivity";
 	
@@ -24,6 +22,8 @@ public class SimpleTabActivity extends ActionBarActivity {
 	
 	private ViewPager mViewPager;
 	private Fragment[] mFragments;
+	private TabView mTab3;
+	private TabView mTab4;
 	
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +31,11 @@ public class SimpleTabActivity extends ActionBarActivity {
         setContentView(R.layout.activity_simple_tab);
         mViewPager = (ViewPager) findViewById(R.id.view_pager);
         mTabGroup = (RadioGroup) findViewById(R.id.tab_group);
+        mTab3 = (TabView) findViewById(R.id.tab_3);
+        mTab4 = (TabView) findViewById(R.id.tab_4);
+        
+        mTab3.setHasTip(true);
+        mTab4.setTipText("99");
         
         mFragments = new Fragment[5];
         
@@ -92,24 +97,5 @@ public class SimpleTabActivity extends ActionBarActivity {
 				
 			}
 		});
-    }
-
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.simple_tab, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-        if (id == R.id.action_settings) {
-            return true;
-        }
-        return super.onOptionsItemSelected(item);
     }
 }
